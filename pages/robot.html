@@ -1,0 +1,20 @@
+<h1>Robot Details</h1>
+<p>Click on one of the items below to see additional info on that section</p>
+
+<!--Best to assign scope terms in controller for easy access/repeatability?
+Or is json file need improvement for separating arms?
+The arm naming convention  needs fix-->
+
+<!--use filter method from tutorial to fill in description section-->
+
+<div ng-repeat="robot in robots">
+  <h4>{{robot.id + " is Here!"}}</h4>
+  <p>{{robot.duties}}</p>
+  <ul>
+    <li>Head:<img ng-src="{{robot.body}}" alt="Robot's Body" style="height:200px;"></li>
+    <li>Arm 1:<img ng-src="{{robot['arm.1'].img}}" alt="Robot's Body" style="height:200px;">{{this.robot['arm.1'].description}}</li>
+    <li>Arm 2:<img ng-src="{{robot['arm.2'].img}}" alt="Robot's Body" style="height:200px;"></li>
+    <li>Arm 3:<img ng-src="{{robot['arm.3'].img}}" alt="Robot's Body" style="height:200px;"></li>
+    <li>Arm 3:<img ng-src="{{robot['arm.4'].img}}" alt="Robot's Body" style="height:200px;"></li>
+  </ul>
+</div>
